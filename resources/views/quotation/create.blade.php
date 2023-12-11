@@ -39,7 +39,7 @@
                             <label class="form-label">Order ID(enter CargoMax ID)</label>
                             <input type="text" class="form-control"
                                 name="order_id" required
-                                placeholder="enter store name" />
+                                placeholder="enter order id" />
                         </div>
                     </div>
                     <div class="row">
@@ -47,13 +47,13 @@
                             <label class="form-label">Address</label>
                             <input type="text" name="address"
                                 class="form-control" required
-                                placeholder="tracking number" />
+                                placeholder="enter address" />
                         </div>
                         <div class="col-md-6 col-sm-6 mb-3">
                             <label class="form-label">Payment Method </label>
                             <input type="text" name="payment"
                                 class="form-control" required
-                                placeholder="enter order id" />
+                                placeholder="enter method of payment" />
                         </div>
                     </div>
                     <div class="row">
@@ -61,18 +61,6 @@
                             <label class="form-label">Order Date</label>
                             <input type="date" name="order_date"
                                 class="form-control" required />
-                        </div>
-                        <div class="col-md-6 col-sm-6 mb-3">
-                            <label class="form-label">Price</label>
-                            <input type="date" name="price"
-                                class="form-control" required />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 mb-3">
-                            <label class="form-label">total</label>
-                            <input type="text" name="total"
-                                 class="form-control"/>
                         </div>
                         <div class="col-md-6 col-sm-6 mb-3">
                             <label class="form-label">Delivery Option</label>
@@ -85,6 +73,22 @@
                             </div>
 
                         </div>
+                        
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6 col-sm-6 mb-3">
+                            <label class="form-label">Price</label>
+                            <input type="text" name="price"
+                                class="form-control" required />
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 mb-3">
+                            <label class="form-label">total</label>
+                            <input type="text" name="total"
+                                 class="form-control"/>
+                        </div>
+                        
+                        
                         
                             <div class="col-md-12 col-sm-12 mb-3">
                                 <div class="form-group">

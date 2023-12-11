@@ -25,11 +25,11 @@ Route::get('/payments', [App\Http\Controllers\PaymentController::class, 'index']
 
 Route::get('/quotations', [App\Http\Controllers\QuotationController::class, 'index'])->name('quotation.index');
 
-Route::get('/create', [App\Http\Controllers\QuotationController::class, 'billing'])->name('quotation.create');
+Route::post('/create', [App\Http\Controllers\QuotationController::class, 'create'])->name('quotation.create');
 
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('auth.register');
 
-Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'signup'])->name('auth.signup');
+Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'signup']);
 
 Route::post('/loginnow', [App\Http\Controllers\Auth\LoginController::class, 'LoginNow'])->name('auth.loginnow');
 

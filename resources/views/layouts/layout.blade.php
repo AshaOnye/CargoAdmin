@@ -11,7 +11,7 @@
     <meta content="Themesbrand" name="author" />
     <meta name="_token" content="{{csrf_token()}}" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <link rel="shortcut icon" href="/assets/images/favicon2.png">
 
     <!-- Bootstrap Css -->
     <link href="/assets/css/bootstrap.min.css" id="bootstrap-style"
@@ -57,8 +57,8 @@
                                     height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="/assets/images/logo3.png" alt=""
-                                    height="55" width="100px">
+                                <img src="/assets/images/favicon2.png" alt=""
+                                    height="55" width="50px">
                             </span>
                         </a>
                     </div>
@@ -146,7 +146,7 @@
                             data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <img class="rounded-circle header-profile-user"
-                                src="/assets/images/users/avatar-1.jpg"
+                                src="/assets/images/users/favicon2.png"
                                 alt="Header Avatar">
                             <span class="d-none d-xl-inline-block ms-1"
                                 key="t-henry">paul</span>
@@ -182,7 +182,7 @@
                     <ul class="metismenu list-unstyled" id="side-menu">
                         <li class="menu-title" key="t-menu">Menu</li>
 
-                        <li>
+                        <li style="padding:10px;">
                             <a href="{{route('dashboard')}}"
                                 class="waves-effect {{ (request()->is('dashboard')) ? 'active' : '' }}">
                                 <i class="bx bx-home-circle"></i>
@@ -190,14 +190,14 @@
                             </a>
                         </li>
                         
-                        <li>
+                        <li style="padding:10px;">
                             <a href="{{ route('shipments.index') }}"
                                 class="waves-effect">
                                 <i class="bx bx-receipt"></i>
                                 <span key="t-chat">All Shipments</span>
                             </a>
                         </li>
-                        <li>
+                        <li style="padding:10px;">
                             <a href="{{ route('quotation.index') }}"
                                 class="waves-effect">
                                 <i class="bx bx-chat"></i>

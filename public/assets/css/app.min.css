@@ -458,7 +458,9 @@ body[data-layout=horizontal] .footer {
     position: relative;
     font-size: 13px;
     -webkit-transition: all .4s;
-    transition: all .4s
+    transition: all .4s;
+    border: solid 1px;
+    border-radius: 5px;
 }
 
 #sidebar-menu ul li a i {

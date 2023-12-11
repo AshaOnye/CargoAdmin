@@ -37,7 +37,7 @@
                         </div>
                         <div class="p-2">
                             <form class="needs-validation" novalidate
-                                action="{{ route('auth.signup') }}"
+                                action="{{ route('register') }}"
                                 method="POST">
                                 @csrf
 

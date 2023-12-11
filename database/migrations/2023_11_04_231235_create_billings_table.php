@@ -20,10 +20,10 @@ class CreateBillingsTable extends Migration
             $table->longtext('address')->nullable();
             $table->string('payment')->nullable();
             $table->datetime('order_date')->nullable();
+            $table->string('delivery_option')->nullable();
             $table->integer('price')->nullable();
             $table->integer('total')->nullable();
             $table->string('order_descp')->nullable();
-            $table->string('delivery_option')->nullable();
             $table->datetime('datetime')->nullable();
         });
     }
