@@ -9,4 +9,6 @@ class Billings extends Model
 {
     use HasFactory;
     public $timestamps = false;
+   protected $fillable = ['bill_name', 'order_id', 'address', 'payment', 'price', 'total', 'order_descp', 'order_date', 'delivery_option', 'datetime'];
+
 }

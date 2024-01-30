@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Billings;
-// use Auth;
+use Auth;
 
 class QuotationController extends Controller
 {
@@ -18,13 +18,49 @@ class QuotationController extends Controller
     public function index()
     {
         // $bill = Billings::where(Auth::user()->id)->get();
-        return view('quotation.index');
+        $quotations = Billings::all(); // This fetches all records, adjust as needed
+
+        return view('quotation.index', ['quotations'=> $quotations]);
+    }
+    public function show($id){
+
+   // $billing = Billings::find($id);
+    $billing = Billings::where('order_id', $id)->first();
+
+    if (!$billing) {
+        abort(404);
     }
 
-    public function billing()
+    return view('quotation.detail', ['billing' => $billing]);
+}
+
+    public function billing(Request $request)
     {
-        dd($request->all());
-        
+       
+        $request->validate([
+            'bill_name' => ['required', 'string', 'max:255'],
+            'payment' => ['required', 'string', 'max:255']
+        ]);
+
+        Billings::create([
+            'bill_name' => $request->bill_name,
+            'order_id' => $request->order_id,
+            'address' => $request->address,
+            'payment' => $request->payment,
+            'order_date' => $request->order_date,
+            'delivery_option' => $request->delivery_option,
+            'price' => $request->price,
+            'total' => $request->total,
+            'order_descp' => $request->order_descp,
+            'datetime' => date('Y-m-d H:i:s'),
+            
+            
+        ]);
+
+        return redirect('/quotations')->with("message", "Quatation  created successfully!");
+       
+        // dd($request->all());
+        /*
         $billing = new billings();
         // $billing->id();
         // $billing->shipid = request('shipid');
@@ -41,6 +77,7 @@ class QuotationController extends Controller
         dd($billing);
 
         $billing->save();
+        */
 
         return view ('/quotation.index');
     }

@@ -24,8 +24,7 @@
                         <div class="float-start">
                             <h4 class="card-title mb-4">Shipments</h4>
                         </div>
-                        <div class="float-end"><a href="#"
-                                class="btn btn-dark btn-sm"></a></div>
+                        
                     </div>
                     <div class="card-body">
 

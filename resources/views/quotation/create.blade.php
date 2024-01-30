@@ -24,6 +24,11 @@
             <div class="card-body">
                 <h4 class="card-title">Quotation Form</h4>
                 <p class="card-title-desc"></p>
+                @if(session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
 
                 <form class="custom-validation" action="/create" method="POST"
                     enctype="multipart/form-data">
@@ -36,7 +41,7 @@
                                 placeholder="enter full name" />
                         </div>
                         <div class=" col-md-6 col-sm-6  mb-3">
-                            <label class="form-label">Order ID(enter CargoMax ID)</label>
+                            <label class="form-label">Ship ID(enter CargoMax Ship ID)</label>
                             <input type="text" class="form-control"
                                 name="order_id" required
                                 placeholder="enter order id" />
@@ -50,10 +55,11 @@
                                 placeholder="enter address" />
                         </div>
                         <div class="col-md-6 col-sm-6 mb-3">
-                            <label class="form-label">Payment Method </label>
-                            <input type="text" name="payment"
+                            <label class="form-label">Email (Enter client email) </label>
+                            //changed payment to email but not changing it on the DB
+                            <input type="text" name="payment" 
                                 class="form-control" required
-                                placeholder="enter method of payment" />
+                                placeholder="enter email" />
                         </div>
                     </div>
                     <div class="row">

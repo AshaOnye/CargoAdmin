@@ -60,7 +60,7 @@
                             </div>
                             @endif
                             <form class="form-horizontal"
-                                action="{{ route('auth.loginnow') }}"
+                                action="{{ url('/admin/login') }}"
                                 method="POST">
 
                                 @csrf

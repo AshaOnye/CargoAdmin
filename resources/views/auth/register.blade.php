@@ -37,7 +37,7 @@
                         </div>
                         <div class="p-2">
                             <form class="needs-validation" novalidate
-                                action="{{ route('register') }}"
+                                action="{{ url('/admin/register') }}"
                                 method="POST">
                                 @csrf
 
